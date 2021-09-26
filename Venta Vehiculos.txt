@@ -1,0 +1,29 @@
+ALTER
+ALTER TABLE ‘administrador’ CHANGE ‘RUTa’ ‘RUTa’ VARCHAR(13) NOT NULL;
+ALTER TABLE ‘compra’ DROP ‘estado’;
+
+
+SELECT
+SELECT * FROM `administrador` WHERE RUT= ‘44.444.444-4’
+SELECT * FROM “administrador” RIGHT JOIN “proveedor” ON RUTa = RUTa.Administrador WHERE RUTa IS “55.555.555-5”
+SELECT * FROM “administrador” LEFT JOIN “bodega” ON RUTa =RUTa.Administrador WHERE RUTa.Administrador IS “33.333.333-3”
+
+
+UPDATE
+UPDATE ‘proveedor’ SET ‘RUTp’ = ‘12138038-5’ WHERE ‘proveedor’.‘RUTp’ = ‘12138038-2’
+UPDATE ‘vehiculo’ SET ‘tipo’ = ‘Deportivo’, ‘km’ = ‘20000’, ‘precio’ = ‘12000000’ WHERE ‘vehiculo’.‘IDv’ = 50
+
+
+INSERT
+INSERT INTO ‘bodega’ VALUES (‘Van’, ‘44.444.444-4’)
+INSERT INTO ‘vehiculo’ (‘IDv’, ‘tipo’, ‘modelo’, ‘marca’, ‘ano’, ‘km’, ‘transmicion’, ‘precio’, ‘tipob.Bodega’) VALUES (NULL, ‘Pick-up’, ‘Amarok’, ‘Volkswagen’, ‘2016’, ‘98.870’, ‘Manula’, ‘18200000’, ‘Pick-up’)
+INSERT INTO ‘usuario’ (‘RUTu’, ‘password’, ‘correo’) VALUES (‘16.251.076-2’, ‘123qweasd’, ‘persona@gmail.com’);
+
+
+DELETE
+DELETE FROM ‘vehiculo’ WHERE ‘vehiculo’.‘IDv’ = 40
+DELETE FROM ‘administrador’ WHERE ‘administrador’.‘RUTa’ = \‘11.111.111-1’\
+
+
+DROP
+DROP TABLE ‘usuario’
